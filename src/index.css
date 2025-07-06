@@ -1,0 +1,7 @@
+body {
+  color: white; /* Text color */
+  background-color: black; 
+  font-family: "Roboto", "Montserrat", sans-serif; /* Font preference order */
+  margin: 0;
+  padding: 0;
+}
