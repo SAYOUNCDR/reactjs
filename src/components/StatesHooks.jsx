@@ -1,12 +1,38 @@
 import { useState } from "react";
 export const StatesHooks = () => {
+  // number inc dec useState()
   const [count, setcount] = useState(0);
   const increment = () => setcount(count + 1);
   const decrement = () => setcount(count - 1);
 
+  //array add, delete, update useState()
   const [friends, setFriends] = useState(["Sayoun", "Alex", "John", "Michel"]);
   const addNewFriend = () => setFriends([...friends, "New Friend"]);
   const removeFriend = () => setFriends(friends.filter((f) => f != "John"));
+  const updateFriend = () => {
+    setFriends(friends.map((f) => (f === "Alex" ? "Alex Smith" : f)));
+  };
+
+  //object useState()
+  const [movie, setMovie] = useState({
+    title: "Endagame",
+    ratings: 9.8,
+  });
+
+  const handleClickRating = () => {
+    //update long way
+    // const copymovies = {
+    //   ...movie,
+    //   ratings: 5,
+    // };
+    // setMovie(copymovies);
+
+    //update object short hand way
+    setMovie({ ...movie, ratings: 10 });
+  };
+
+  //Array of object
+
   return (
     <div>
       <h1>{count}</h1>
@@ -19,6 +45,11 @@ export const StatesHooks = () => {
 
       <button onClick={addNewFriend}>Add new friend</button>
       <button onClick={removeFriend}>Remove friend</button>
+      <button onClick={updateFriend}>Update friend</button>
+
+      <h1>Object title: {movie.title}</h1>
+      <p>Object ratings: {movie.ratings}</p>
+      <button onClick={handleClickRating}>Change Rating</button>
     </div>
   );
 };
