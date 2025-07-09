@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Arrayobj } from "./components/Arrayobj";
 import { ChildrenProp } from "./components/ChildrenProp";
 import { ConditionalRender } from "./components/ConditionalRender";
@@ -9,11 +10,15 @@ import { ProductInfo } from "./components/ProductInfo";
 import { PropsChild } from "./components/PropsChild";
 import { StatesHooks } from "./components/StatesHooks";
 import { Styling } from "./components/Styling";
+import { Comp1 } from "./components/Comp1";
+import { Comp2 } from "./components/Comp2";
+import { ArrowUseState } from "./components/ArrowUseState";
 
 //Importing css
 import "./index.css";
 //Components inside a component
 const App = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
       <JSXRules />
@@ -36,8 +41,12 @@ const App = () => {
 
       <Styling />
       <EventHandler />
-
       <StatesHooks />
+
+      <Comp1 count={count} onClickHandler={() => setCount(count + 1)} />
+      <Comp2 count={count} onClickHandler={() => setCount(count + 1)} />
+
+      <ArrowUseState />
     </div>
   );
 };

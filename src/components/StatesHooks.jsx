@@ -32,6 +32,18 @@ export const StatesHooks = () => {
   };
 
   //Array of object
+  const [arrayMovies, setarrayMovies] = useState([
+    { id: 1, title: "Avangers: EndGame", ratings: 9.8 },
+    { id: 2, title: "Spider-man HomeComing", ratings: 8.9 },
+  ]);
+
+  const changeName = () => {
+    setarrayMovies(
+      arrayMovies.map((m) =>
+        m.id === 1 ? { ...arrayMovies, title: "John Wick 4" , ratings: 9 } : m
+      )
+    );
+  };
 
   return (
     <div>
@@ -50,6 +62,15 @@ export const StatesHooks = () => {
       <h1>Object title: {movie.title}</h1>
       <p>Object ratings: {movie.ratings}</p>
       <button onClick={handleClickRating}>Change Rating</button>
+
+      {arrayMovies.map((m) => (
+        <>
+          <li>{m.title}</li>
+          <li>{m.ratings}</li>
+        </>
+      ))}
+
+      <button onClick={changeName}>Change name</button>
     </div>
   );
 };
