@@ -1,3 +1,5 @@
+//Importing css
+import "./index.css";
 import { useState } from "react";
 import { Arrayobj } from "./components/Arrayobj";
 import { ChildrenProp } from "./components/ChildrenProp";
@@ -13,9 +15,10 @@ import { Styling } from "./components/Styling";
 import { Comp1 } from "./components/Comp1";
 import { Comp2 } from "./components/Comp2";
 import { ArrowUseState } from "./components/ArrowUseState";
+import  {CntExUseState}  from "./UseStates/CntExUseState";
+import { TodoListUseState } from "./components/TodoListUseState";
 
-//Importing css
-import "./index.css";
+
 //Components inside a component
 const App = () => {
   const [count, setCount] = useState(0);
@@ -47,6 +50,12 @@ const App = () => {
       <Comp2 count={count} onClickHandler={() => setCount(count + 1)} />
 
       <ArrowUseState />
+
+      
+      {/* Usestate exercises */}
+      <CntExUseState />
+      <TodoListUseState />
+     
     </div>
   );
 };
