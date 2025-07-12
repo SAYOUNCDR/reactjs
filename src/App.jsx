@@ -15,9 +15,10 @@ import { Styling } from "./components/Styling";
 import { Comp1 } from "./components/Comp1";
 import { Comp2 } from "./components/Comp2";
 import { ArrowUseState } from "./components/ArrowUseState";
-import  {CntExUseState}  from "./UseStates/CntExUseState";
+import { CntExUseState } from "./UseStates/CntExUseState";
 import { TodoListUseState } from "./components/TodoListUseState";
-
+import { Profile } from "./UseStates/profile";
+import ShoppingList from "./UseStates/ShoppingList";
 
 //Components inside a component
 const App = () => {
@@ -51,11 +52,11 @@ const App = () => {
 
       <ArrowUseState />
 
-      
       {/* Usestate exercises */}
       <CntExUseState />
       <TodoListUseState />
-     
+      <Profile />
+      <ShoppingList />
     </div>
   );
 };
