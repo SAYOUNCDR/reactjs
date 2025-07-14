@@ -19,6 +19,7 @@ import { CntExUseState } from "./UseStates/CntExUseState";
 import { TodoListUseState } from "./components/TodoListUseState";
 import { Profile } from "./UseStates/profile";
 import ShoppingList from "./UseStates/ShoppingList";
+import StateEffect from "./UseStates/StateEffect";
 
 //Components inside a component
 const App = () => {
@@ -57,6 +58,9 @@ const App = () => {
       <TodoListUseState />
       <Profile />
       <ShoppingList />
+
+      {/* UseState and UseEffect perfect example */}
+      <StateEffect />
     </div>
   );
 };
