@@ -20,10 +20,13 @@ import { TodoListUseState } from "./components/TodoListUseState";
 import { Profile } from "./UseStates/profile";
 import ShoppingList from "./UseStates/ShoppingList";
 import StateEffect from "./UseStates/StateEffect";
+import Modal from "./Portals/Modal";
 
 //Components inside a component
 const App = () => {
   const [count, setCount] = useState(0);
+  // For Protal modal useState
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
       <JSXRules />
@@ -61,6 +64,17 @@ const App = () => {
 
       {/* UseState and UseEffect perfect example */}
       <StateEffect />
+
+      {/* For Modal portal */}
+      <button onClick={() => setShowModal(true)}>Open modal</button>
+      {showModal && (
+        <Modal>
+          <div>
+            <h2 style={{ color: "black" }}>I am a Portal Modal</h2>
+            <button onClick={() => setShowModal(false)}>Close Modal</button>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 };
