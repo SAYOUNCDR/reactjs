@@ -22,6 +22,7 @@ import ShoppingList from "./UseStates/ShoppingList";
 import StateEffect from "./UseStates/StateEffect";
 import Modal from "./Portals/Modal";
 import { CopyInput } from "./Portals/CopyInput";
+import { Parent } from "./ContextAPI/Parent";
 
 //Components inside a component
 const App = () => {
@@ -69,6 +70,8 @@ const App = () => {
       )}
       {/* Copy to clipboard */}
       <CopyInput />
+
+      <Parent />
     </div>
   );
 };
