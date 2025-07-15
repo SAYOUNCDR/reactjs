@@ -21,6 +21,7 @@ import { Profile } from "./UseStates/profile";
 import ShoppingList from "./UseStates/ShoppingList";
 import StateEffect from "./UseStates/StateEffect";
 import Modal from "./Portals/Modal";
+import { CopyInput } from "./Portals/CopyInput";
 
 //Components inside a component
 const App = () => {
@@ -34,37 +35,28 @@ const App = () => {
       <ProductInfo />
       <List />
       <Arrayobj />
-
       {/* Passing Props to child components */}
       <PropsChild name="Sayoun" gmail="0xSYN.dev@gmail.com" />
-
       {/* Opening and closing JSX tags */}
       <ChildrenProp>
         <h1>Hello from App JSX</h1>
         <p>Passing arguments as props from app.jsx to ChildrenProps</p>
       </ChildrenProp>
-
       {/* Passing prop for Conditional rendering */}
       <ConditionalRender isvalid={true} />
-
       <Styling />
       <EventHandler />
       <StatesHooks />
-
       <Comp1 count={count} onClickHandler={() => setCount(count + 1)} />
       <Comp2 count={count} onClickHandler={() => setCount(count + 1)} />
-
       <ArrowUseState />
-
       {/* Usestate exercises */}
       <CntExUseState />
       <TodoListUseState />
       <Profile />
       <ShoppingList />
-
       {/* UseState and UseEffect perfect example */}
       <StateEffect />
-
       {/* For Modal portal */}
       <button onClick={() => setShowModal(true)}>Open modal</button>
       {showModal && (
@@ -75,6 +67,8 @@ const App = () => {
           </div>
         </Modal>
       )}
+      {/* Copy to clipboard */}
+      <CopyInput />
     </div>
   );
 };
