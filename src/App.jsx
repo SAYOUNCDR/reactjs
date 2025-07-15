@@ -23,6 +23,7 @@ import StateEffect from "./UseStates/StateEffect";
 import Modal from "./Portals/Modal";
 import { CopyInput } from "./Portals/CopyInput";
 import { Parent } from "./ContextAPI/Parent";
+import { Reducer } from "./Reducer/Reducer";
 
 //Components inside a component
 const App = () => {
@@ -72,6 +73,8 @@ const App = () => {
       <CopyInput />
 
       <Parent />
+
+      <Reducer />
     </div>
   );
 };
