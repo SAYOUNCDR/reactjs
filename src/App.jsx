@@ -24,6 +24,8 @@ import Modal from "./Portals/Modal";
 import { CopyInput } from "./Portals/CopyInput";
 import { Parent } from "./ContextAPI/Parent";
 import { Reducer } from "./Reducer/Reducer";
+import MixedCounter from "./Reducer/MixedCounter";
+import { Refuse } from "./Ref/Refuse";
 
 //Components inside a component
 const App = () => {
@@ -75,6 +77,10 @@ const App = () => {
       <Parent />
 
       <Reducer />
+
+      <MixedCounter />
+
+      <Refuse />
     </div>
   );
 };
