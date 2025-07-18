@@ -26,6 +26,8 @@ import { Parent } from "./ContextAPI/Parent";
 import { Reducer } from "./Reducer/Reducer";
 import MixedCounter from "./Reducer/MixedCounter";
 import { Refuse } from "./Ref/Refuse";
+import { Timer } from "./Ref/Timer";
+import { FetchEffect } from "./CustomHooks/FetchEffect";
 
 //Components inside a component
 const App = () => {
@@ -81,6 +83,10 @@ const App = () => {
       <MixedCounter />
 
       <Refuse />
+
+      <Timer />
+
+      <FetchEffect />
     </div>
   );
 };
