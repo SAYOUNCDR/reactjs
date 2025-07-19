@@ -28,6 +28,7 @@ import MixedCounter from "./Reducer/MixedCounter";
 import { Refuse } from "./Ref/Refuse";
 import { Timer } from "./Ref/Timer";
 import { FetchEffect } from "./CustomHooks/FetchEffect";
+import { UniqueID } from "./UniqueID/UniqueID";
 
 //Components inside a component
 const App = () => {
@@ -86,7 +87,9 @@ const App = () => {
 
       <Timer />
 
-      <FetchEffect />
+      {/* <FetchEffect /> */}
+
+      <UniqueID />
     </div>
   );
 };
